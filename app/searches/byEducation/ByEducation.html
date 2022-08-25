@@ -1,0 +1,86 @@
+<div class="container">
+  <main class="divScroll">
+    <div class="py-5 text-center">
+      <h2>Search By Educational Information</h2>
+      <p class="lead">Please fill the fields to search your priest</p>
+    </div>
+
+    <div class="col-md-10 col-lg-10">
+      <h4 class="mb-3">Educational Information and Positions </h4>
+      <form class="needs-validation" novalidate>
+        <div class="row g-3">
+          <div class="col-md-5">
+            <label for="country" class="form-label">Type of education</label>
+            <select class="form-select" id="typeofschool" required>
+              <option value="">Choose...</option>
+              <option>Universität</option>
+              <option>Fürstenschule</option>
+              <option>Thomasschule</option>
+              <option>Gymnasium</option>
+              <option>Kreuzschule</option>
+              <option>Schule</option>
+              <option>Nikolaischule</option>
+              <option>Predigercolleg</option>
+              <option>Predigerseminar</option>
+              <option>Wettinergymnasium</option>
+              <option>Stiftsschule</option>
+              <option>Progymnasium</option>
+              <option>Realschule</option>
+              <option>Bürgerschule</option>
+              <option>Oberrealschule</option>
+              <option>Reformrealgymnasium</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid country.
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label for="attendingplace" class="form-label">Attending place</label>
+            <input class="form-control autocomplete" id="attendingplace" />
+          </div>
+
+          <div class="col-12">
+            <label for="nameofschool" class="form-label">Name of school</label>
+            <input class="form-control autocomplete" id="nameofschool" />
+          </div>
+
+          <div class="col-12">
+            <label for="username" class="form-label">Enrollment date of Education (Dates)</label>
+            <div class="col-sm-4">
+              <div class="input-group date">
+                <input type="text" class="form-control" id="enrollmentdate">
+                <span class="input-group-append">
+                  <span class="input-group-text bg-white">
+                    <i class="fa fa-calendar"></i>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label for="username" class="form-label">Graduation date of Education (Dates)</label>
+            <div class="col-sm-4">
+              <div class="input-group date">
+                <input type="text" class="form-control" id="graduationdate">
+                <span class="input-group-append">
+                  <span class="input-group-text bg-white">
+                    <i class="fa fa-calendar"></i>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+          <button class="btn btn-primary" type="submit" onclick="return searchByEducation()">Search</button>
+      </form>
+    </div>
+
+    <h1>Results for your Search</h1>
+    <br>
+    <div id="result" class="container">
+      Press Search to start
+    </div>
+</div>

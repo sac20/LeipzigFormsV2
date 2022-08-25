@@ -1,0 +1,166 @@
+<div class="container">
+    <div class="main-body">
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
+                <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+            </ol>
+        </nav>
+        <!-- /Breadcrumb -->
+
+        <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="sacerdote.png" alt="Priests"
+                                class="rounded-circle" width="150">
+                            <div class="mt-3">
+                                <h4>
+                                    <p id='name'></p>
+                                </h4>
+                                <p id='gender' class="text-muted font-size-sm"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="d-flex align-items-center mb-3"><i
+                                    class="material-icons text-info mr-2">Family</i></h6>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h6 class="mb-0">Father</h6>
+                                </div>
+                                <div class="col-sm-8 text-secondary">
+                                    <a href='#' id='fatherName'></a>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h6 class="mb-0">Mother</h6>
+                                </div>
+                                <div class="col-sm-8 text-secondary">
+                                    <a href='#' id='motherName'></a>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h6 class="mb-0">Child</h6>
+                                </div>
+                                <div class="col-sm-8 text-secondary">
+                                    <a href='#' id='childName'></a>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">
+                                    First Name
+                                </h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <p id='firstName'></p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">
+                                    Last Name
+                                </h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <p id='lastName'></p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Birth Date</h6>
+                            </div>
+                            <div class="col-sm-3 text-secondary">
+                                <p id='birthDate'></p>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Birth Place</h6>
+                            </div>
+                            <div class="col-sm-3 text-secondary">
+                                <a href='#' id='birthPlaceName'></a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Death Date</h6>
+                            </div>
+                            <div class="col-sm-3 text-secondary">
+                                <p id='deathDate'></p>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Death Place</h6>
+                            </div>
+                            <div class="col-sm-3 text-secondary">
+                                <a href='#' id='deathPlaceName'></a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Sources and literature</h6>
+                            </div>
+                            <div class="divScroll col-sm-9 text-secondary">
+                                <p id='comment'></p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="row gutters-sm">
+                    <div class="col-sm-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h6 class="d-flex align-items-center mb-3"><i
+                                        class="material-icons text-info mr-2">Educational Life</i></h6>
+                                        <div id="educationalLife"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h6 class="d-flex align-items-center mb-3"><i
+                                        class="material-icons text-info mr-2">Priestly Life</i></h6>
+                                        <div id="priestlyLife"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+    <button id = 'edit' class="btn btn-primary" type="submit">Edit</button>
+</div>

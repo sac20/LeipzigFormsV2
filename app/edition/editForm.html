@@ -1,0 +1,79 @@
+<div class="container">
+    <main class="divScroll">
+        <div class="py-5 text-center">
+            <h2>Edit Priest</h2>
+            <p class="lead">Please fill the fields to insert your priest</p>
+        </div>
+
+        <div class="col-md-10 col-lg-10">
+            <h4 class="mb-3">Personal Information</h4>
+            <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="firstName" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            Valid first name is required.
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="lastName" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            Valid last name is required.
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="username" class="form-label">Birth Date</label>
+                        <div class="col-sm-4">
+                            <div class="input-group date" id="datepicker">
+                                <input type="text" class="form-control" id="birthDate">
+                                <span class="input-group-append">
+                                    <span class="input-group-text bg-white">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <label for="birthplace" class="form-label">Birth Place</label>
+                        <input class="form-control autocomplete" id="birthPlaceName" />
+                    </div>
+                    <div class="col-12">
+                        <label for="username" class="form-label">Date of death</label>
+                        <div class="col-sm-4">
+                            <div class="input-group date" id="datepicker2">
+                                <input type="text" class="form-control" id="deathDate">
+                                <span class="input-group-append">
+                                    <span class="input-group-text bg-white">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <label for="deathPlace" class="form-label">Death Place</label>
+                        <input class="form-control autocomplete" id="deathPlaceName" />
+                    </div>
+
+                    <hr class="row g-3">
+                    <p> Educational Life</p>
+                    <div id = 'educationalLife'></div>
+                    <hr class="row g-3">
+                    <p> Priestly Life</p>
+                    <div id = 'priestlyLife'></div>
+                    <hr class="my-4">
+                    <button class="btn btn-primary" type="submit" onclick="return edit()">Edit</button>
+
+            </form>
+            
+        </div>
+        
+
+</div>

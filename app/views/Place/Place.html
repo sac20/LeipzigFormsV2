@@ -1,0 +1,29 @@
+<div class="container divScroll">
+  <div class="main-body row d-flex justify-content-center">
+    <div class="card" style="width: 500px; height:500px; margin: 20px;">
+      <div id="map"></div>
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtY_34zy32vDVREfOuixkYyiKGE9pdwV8&callback=initMap&v=weekly&libraries=places"
+        defer></script>
+
+      <div class="card-body">
+        <h5 id='placename'class="card-title" style="text-align: center;">Bogota</h5>
+        <p class="card-text">Relevant Information:<p id = 'district'></p>
+          <p id = 'community'></p>
+        </p>
+      </div>
+    </div>
+    <div class="card text-center" style="width: 500px; height:500px; margin: 20px;">
+      <div class="card-header">List of Religeous Institutions</div>
+      <div id = 'religionlist'class="card-body">
+        
+      </div>
+    </div>
+    <div class="card text-center" style="width: 500px; height:500px; margin: 20px;">
+      <div class="card-header">List of Educational Institutions</div>
+      <div class="card-body">
+        <div id = 'schoolist'class="card-body">
+      </div>
+    </div>
+    </main>
+  </div>
