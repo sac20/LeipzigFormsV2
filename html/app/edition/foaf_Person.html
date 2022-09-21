@@ -1,0 +1,149 @@
+<div class="container">
+    <div class="form-definition">
+        <input id="form-uri" value="">
+        <input id="form-class" value="foaf:Person">
+
+        <pre id="form-sparql">
+        <!--PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        PREFIX hp: <http://purl.org/voc/hp/>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        SELECT ?label ?firstName ?lastName ?birthDate ?deathDate ?birthPlace ?deathPlace ?attendedSchool ?hasPosition
+            WHERE {
+            ?uri rdf:type foaf:Person.
+        ?uri rdfs:label ?label.
+        ?uri foaf:firstName ?firstName.
+        ?uri foaf:lastName ?lastName.
+        OPTIONAL{
+            ?uri hp:birthDate ?birthDate.
+        }
+        OPTIONAL{
+            ?uri hp:dateOfDeath ?deathDate.
+        }
+        OPTIONAL{
+            ?uri hp:birthPlace ?birthPlace.
+            ?birthPlace rdfs:label ?birthPlaceName.
+        }
+        OPTIONAL {
+            ?uri hp:placeOfDeath ?deathPlace.
+            ?deathPlace rdfs:label ?deathPlaceName.
+        }
+        OPTIONAL {
+            ?uri hp:attendedSchool ?attendedSchool.
+        }
+        OPTIONAL {
+            ?uri hp:hasPosition ?hasPosition.
+        }
+        }
+        Limit 100
+        -->
+        </pre>
+    </div>
+
+    <main class="divScroll">
+
+        <div class="py-5 text-center">
+            <h2>Edit Priest</h2>
+            <p class="lead">Please fill the fields to insert your priest</p>
+        </div>
+
+
+        <div class="col-md-10 col-lg-10">
+            <h4 class="mb-3">Personal Information</h4>
+            <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <label for="label" class="form-label">label</label>
+                        <input type="text" class="form-control label" id="label" placeholder="" value=""
+                            update="?uri rdfs:label !value." required>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="firstName" class="form-label">First name</label>
+                        <input type="text" class="form-control firstName" id="firstName" placeholder="" value=""
+                            update="?uri foaf:firstName !value." required>
+                        <div class="invalid-feedback">
+                            Valid first name is required.
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="lastName" class="form-label">Last name</label>
+                        <input type="text" class="form-control lastName" id="lastName" placeholder="" value=""
+                            update="?uri foaf:lastName !value." required>
+                        <div class="invalid-feedback">
+                            Valid last name is required.
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="username" class="form-label">Birth Date</label>
+                        <div class="col-sm-4">
+                            <div class="input-group date" id="datepicker">
+                                <input type="text" class="form-control birthDate" id="birthDate"
+                                    update="?uri hp:birthDate !value.">
+                                <span class="input-group-append">
+                                    <span class="input-group-text bg-white">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="birthPlace" class="form-label">Birth Place Name</label>
+                        <input class="form-control autocomplete birthPlace" id="birthPlaceName" name="info"
+                            query="SELECT DISTINCT ?uri WHERE {?uri hp:nameOfPlace '!value'}" 
+                            load="SELECT DISTINCT ?value WHERE {?uri hp:nameOfPlace ?value}" 
+                            uriElement = 'birthPlace'/>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="birthPlace" class="form-label">Birth Place</label>
+                        <input class="form-control autocomplete birthPlace" id="birthPlace"
+                            update="?uri hp:birthPlace ?value."
+                            autocomplete="SELECT DISTINCT ?value  WHERE {?subject hp:nameOfPlace ?value}" />
+                    </div>
+                    <div class="col-12">
+                        <label for="username" class="form-label">Date of death</label>
+                        <div class="col-sm-4">
+                            <div class="input-group date" id="datepicker2">
+                                <input type="text" class="form-control deathDate" id="deathDate"
+                                    update="?uri hp:dateOfDeath !value.">
+                                <span class="input-group-append">
+                                    <span class="input-group-text bg-white">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="deathPlace" class="form-label">Death Place Name</label>
+                        <input class="form-control autocomplete deathPlace" id="deathPlaceName" name="info"
+                            query="SELECT DISTINCT ?uri WHERE {?uri hp:nameOfPlace '!value'}" 
+                            load="SELECT DISTINCT ?value WHERE {?uri hp:nameOfPlace ?value}" 
+                            uriElement = 'deathPlace'/>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="deathPlace" class="form-label">DEATH Place</label>
+                        <input class="form-control autocomplete deathPlace" id="deathPlace"
+                            update="?uri hp:placeOfDeath ?value."
+                            autocomplete="SELECT DISTINCT ?value  WHERE {?subject hp:nameOfPlace ?value}" />
+                    </div>
+
+                    <hr class="row g-3">
+                    <p> Educational Life</p>
+                    <input class='attendedSchool'></input>
+                    <hr class="row g-3">
+                    <p> Priestly Life</p>
+                    <input class='hasPosition'></input>
+                    <hr class="my-4">
+                    <button class="btn btn-primary" type="submit" onclick="return edit()">Edit</button>
+
+            </form>
+
+        </div>
+
+
+</div>

@@ -1,0 +1,64 @@
+<div class="container">
+    <main class="divScroll">
+      <div class="py-5 text-center">
+        <h2>Search By Positions</h2>
+        <p class="lead">Please fill the fields to search your priest</p>
+      </div>
+  
+      <div class="col-md-10 col-lg-10">
+        <h4 class="mb-3">Educational Information and Positions </h4>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+  
+            <div class="col-12">
+              <label for="occupation" class="form-label">Occupation</label>
+              <input class="form-control autocomplete" id="occupation" />
+            </div>
+  
+            <div class="col-12">
+              <label for="workpace" class="form-label">Work Place</label>
+              <input class="form-control autocomplete" id="workplace" />
+            </div>
+  
+  
+            <div class="col-12">
+              <label for="dateStartJob" class="form-label">Start date of job (Dates)</label>
+              <div class="col-sm-4">
+                <div class="input-group date" id="datepicker">
+                  <input type="text" class="form-control" id="startdatejob">
+                  <span class="input-group-append">
+                    <span class="input-group-text bg-white">
+                      <i class="fa fa-calendar"></i>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+  
+  
+            <div class="col-12">
+              <label for="dateRetirement" class="form-label">Retirement date of Job (Dates)</label>
+              <div class="col-sm-4">
+                <div class="input-group date" id="datepicker2">
+                  <input type="text" class="form-control" id="retirementdatejob">
+                  <span class="input-group-append">
+                    <span class="input-group-text bg-white">
+                      <i class="fa fa-calendar"></i>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+  
+  
+            <hr class="my-4">
+            <button class="btn btn-primary" type="submit" onclick="return searchByOccupation()">Search</button>
+        </form>
+      </div>
+      
+      <h1>Results for your Search</h1>
+    <br>
+    <div id="result" class="container">
+      Press Search to start
+    </div>
+</div>
